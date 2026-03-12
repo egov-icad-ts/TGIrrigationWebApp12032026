@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p" 
+	xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd 
+        http://www.springframework.org/schema/util 
+        http://www.springframework.org/schem...pring-util.xsd
+		http://www.springframework.org/schema/task 
+		http://www.springframework.org/schema/task/spring-task-3.0.xsd
+		 http://www.springframework.org/schema/security
+           http://www.springframework.org/schema/security/spring-security-4.0.3.xsd">
+
+
+
+	
+   
+
+
+
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:ApplicationResources.properties</value>
+				<value>classpath:database.properties</value>
+				<value>classpath:dbqueries.properties</value>
+			</list>
+		</property>
+		<property name="ignoreUnresolvablePlaceholders" value="true" />
+	</bean>
+
+	<context:annotation-config />
+
+	<context:component-scan
+		base-package="in.ts.icad.leagal.controller,in.ts.icad.leagal.manager,in.ts.icad.leagal.dao,in.ts.icad.leagal.util,in.ts.icad.project.graphs" />
+
+	<bean id="tilesViewResolver"
+		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="viewClass">
+			<value>
+				org.springframework.web.servlet.view.tiles2.TilesView
+			</value>
+		</property>
+	</bean>
+
+	<bean id="tilesConfigurer"
+		class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
+		<property name="definitions">
+			<list>
+				<value>/WEB-INF/tiles.xml</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="jspViewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+
+		<property name="prefix">
+			<value>/WEB-INF/jsp/</value>
+		</property>
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+	</bean>
+	
+	 <bean id="viewResolver"
+  class="org.springframework.web.servlet.view.ResourceBundleViewResolver">
+  <property name="order" value="1"></property>
+  <property name="basename" value="views"></property>
+ </bean>
+ 
+ 
+ <mvc:resources mapping="web/html/**" location="/html/" /> 
+	<mvc:resources mapping="/images/**" location="/images/" />
+	<mvc:resources mapping="/css/**" location="/css/" />
+	<mvc:resources mapping="/js/**" location="/js/" />
+	<mvc:resources mapping="/uploadedFiles/**" location="/uploadedFiles/" />
+	<mvc:annotation-driven />
+	<mvc:default-servlet-handler />
+
+	<bean  class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+		<property name="messageConverters">
+			<list>
+				<ref bean="jsonMessageConverter" />
+				<ref bean="xmlMessageConverter"/>
+			</list>
+		</property>
+	</bean>
+
+	<!-- Configure bean to convert JSON to POJO and vice versa -->
+	<bean id="jsonMessageConverter"
+		class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+	</bean>
+	
+	<bean id="xmlMessageConverter" class="org.springframework.http.converter.xml.Jaxb2RootElementHttpMessageConverter">
+</bean>
+
+	<bean id="messageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basename" value="classpath:ApplicationResources" />
+	</bean>
+
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${psql.jdbc.driverClassName}" />
+		<property name="url" value="${psql.jdbc.url}" />
+		<property name="username" value="${psql.jdbc.username}" />
+		<property name="password" value="${psql.jdbc.password}" />
+	</bean>
+	
+	<!--   <bean id="dataSource1"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${sql.jdbc.driverClassName}" />
+		<property name="url" value="${sql.jdbc.url}" />
+		<property name="username" value="${sql.jdbc.username}" />
+		<property name="password" value="${sql.jdbc.password}" />
+	</bean>   -->
+	
+	  <bean id="dataSource1"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${psql.jdbc.driverClassName16}" />
+		<property name="url" value="${psql.jdbc.url16}" />
+		<property name="username" value="${psql.jdbc.username16}" />
+		<property name="password" value="${psql.jdbc.password16}" />
+	</bean>
+	
+	
+	 <bean id="dataSource3"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${psql.jdbc.driverClassName3}" />
+		<property name="url" value="${psql.jdbc.url3}" />
+		<property name="username" value="${psql.jdbc.username3}" />
+		<property name="password" value="${psql.jdbc.password3}" />
+	</bean> 
+	
+	<bean id="dataSource4"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${psql.jdbc.driverClassName4}" />
+		<property name="url" value="${psql.jdbc.url4}" />
+		<property name="username" value="${psql.jdbc.username4}" />
+		<property name="password" value="${psql.jdbc.password4}" />
+	</bean> 
+	
+	 <bean id="dataSource6"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${psql.jdbc.driverClassName6}" />
+		<property name="url" value="${psql.jdbc.url6}" />
+		<property name="username" value="${psql.jdbc.username6}" />
+		<property name="password" value="${psql.jdbc.password6}" />
+	</bean> 
+	
+	 <bean id="dataSource7"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${psql.jdbc.driverClassName7}" />
+		<property name="url" value="${psql.jdbc.url7}" />
+		<property name="username" value="${psql.jdbc.username7}" />
+		<property name="password" value="${psql.jdbc.password7}" />
+	</bean> 
+	
+	 <bean id="dataSource8"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${psql.jdbc.driverClassName8}" />
+		<property name="url" value="${psql.jdbc.url8}" />
+		<property name="username" value="${psql.jdbc.username8}" />
+		<property name="password" value="${psql.jdbc.password8}" />
+	</bean> 
+	
+	
+	<bean id="dataSource9"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${psql.jdbc.driverClassName9}" />
+		<property name="url" value="${psql.jdbc.url9}" />
+		<property name="username" value="${psql.jdbc.username9}" />
+		<property name="password" value="${psql.jdbc.password9}" />
+	</bean> 
+	
+	<bean id="dataSource10"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${psql.jdbc.driverClassName10}" />
+		<property name="url" value="${psql.jdbc.url10}" />
+		<property name="username" value="${psql.jdbc.username10}" />
+		<property name="password" value="${psql.jdbc.password10}" />
+	</bean> 
+	
+	<bean id="dataSource11"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${psql.jdbc.driverClassName11}" />
+		<property name="url" value="${psql.jdbc.url11}" />
+		<property name="username" value="${psql.jdbc.username11}" />
+		<property name="password" value="${psql.jdbc.password11}" />
+	</bean> 
+	
+	<bean id="dataSource12"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${psql.jdbc.driverClassName12}" />
+		<property name="url" value="${psql.jdbc.url12}" />
+		<property name="username" value="${psql.jdbc.username12}" />
+		<property name="password" value="${psql.jdbc.password12}" />
+	</bean> 
+	
+	<bean id="dataSource13"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${psql.jdbc.driverClassName13}" />
+		<property name="url" value="${psql.jdbc.url13}" />
+		<property name="username" value="${psql.jdbc.username13}" />
+		<property name="password" value="${psql.jdbc.password13}" />
+	</bean> 
+	
+	
+	<bean id="dataSource14"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${psql.jdbc.driverClassName14}" />
+		<property name="url" value="${psql.jdbc.url14}" />
+		<property name="username" value="${psql.jdbc.username14}" />
+		<property name="password" value="${psql.jdbc.password14}" />
+	</bean> 
+	
+	
+	<bean id="dataSource15"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${psql.jdbc.driverClassName15}" />
+		<property name="url" value="${psql.jdbc.url15}" />
+		<property name="username" value="${psql.jdbc.username15}" />
+		<property name="password" value="${psql.jdbc.password15}" />
+	</bean> 
+	
+	
+	
+	
+	
+	<!--<bean id="dataSource7"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${psql.jdbc.driverClassName7}" />
+		<property name="url" value="${psql.jdbc.url7}" />
+		<property name="username" value="${psql.jdbc.username7}" />
+		<property name="password" value="${psql.jdbc.password7}" />
+	</bean>  -->
+	
+	
+	 
+	 
+	 
+	 
+	 
+	
+	<!-- <bean id="dataSource2"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${psql.jdbc.driverClassName2}" />
+		<property name="url" value="${psql.jdbc.url2}" />
+		<property name="username" value="${psql.jdbc.username2}" />
+		<property name="password" value="${psql.jdbc.password2}" />
+	</bean> -->
+	
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver" >
+		<property name="maxUploadSize" value="60000000" />
+		
+        </bean>
+
+
+	<!-- Time Scheduler to Trigger Controller method automatically -->
+	<!-- <task:annotation-driven scheduler="scheduler" executor="executor" /> 
+		 -->
+	<!-- changed on 18-2-16 -->
+	<task:annotation-driven  scheduler="scheduler" executor="executor"  />
+	<task:executor id="executor" pool-size="25" />
+	 <task:scheduler id="scheduler" pool-size="25" />
+	<!-- end of scheduler -->
+	
+	
+ 
+  <!--   <bean id="myCronForExtraFloatDigits" class="in.ts.icad.leagal.util.MyCronForExtraFloatDigits"></bean>  -->
+    
+     <bean id="myScheduletanksData" class="in.ts.icad.leagal.util.MyScheduletanksData"></bean>
+     
+      <bean id="myScheduleHrmsData" class="in.ts.icad.leagal.util.MyScheduleHrmsData"></bean>
+      
+      
+       <bean id="mySchedulePMSInfo" class="in.ts.icad.leagal.util.MySchedulePMSInfo"></bean>
+       
+        
+       
+       
+       
+     
+      
+	
+	
+
+
+	<!--  <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="smtp.gmail.com" />
+		<property name="port" value="587" />
+		<property name="username" value="icadcc.tg@gmail.com" />
+		<property name="password" value="icadcc@2017" />
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.transport.protocol">smtp</prop>
+				<prop key="mail.smtp.auth">true</prop>
+				<prop key="mail.smtp.starttls.enable">false</prop>
+				<prop key="mail.smtps.debug">true</prop>
+				<prop key="mail.smtp.ssl.enable">true</prop>
+			</props>
+		</property>
+	</bean> -->
+
+<!-- 	<bean id="simpleMailMessage" class="org.springframework.mail.SimpleMailMessage">
+		<property name="from" value="icadcc.tg@gmail.com" />
+		<property name="to" value="" />
+		<property name="subject" value="" />
+		<property name="text">
+			<value> <![CDATA[ Dear %s,\n  Mail Content : %s ]]>
+			</value>
+		</property>
+	</bean> -->
+
+<!-- 	<bean id="excelGenerateEmail" class="in.pms.util.ExcelGenerateEmail">
+		<property name="mailSender" ref="mailSender" />
+		<property name="simpleMailMessage" ref="simpleMailMessage" />
+	</bean> -->
+
+<!-- 	<bean id="emailToOffices" class="in.ts.icad.leagal.util.EmailConfig">
+		<property name="mailSender" ref="mailSender" />
+		<property name="simpleMailMessage" ref="simpleMailMessage" />
+	</bean>  --> 
+
+	<!-- <bean id="XMLConverter" class="in.ap.icad.ispp.util.XMLConverter"> 
+		<property name="marshaller" ref="castorMarshaller" /> <property name="unmarshaller" 
+		ref="castorMarshaller" /> </bean> <bean id="castorMarshaller" class="org.springframework.oxm.castor.CastorMarshaller" 
+		/> -->
+
+
+	<bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter" /> 
+	<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping"> 
+		<property name="order" value="0" /> </bean>
+		
+
+	 <mvc:interceptors>
+		<bean class="in.ts.icad.leagal.interceptor.AuthenticationInterceptor" />
+	</mvc:interceptors>
+	
+	
+	
+		
+
+
+
+
+
+</beans>

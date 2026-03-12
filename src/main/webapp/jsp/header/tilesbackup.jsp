@@ -1,0 +1,1792 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	<definition name="baseLayout" template="/jsp/header/BaseLayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="headerhome" value="" />
+		<put-attribute name="headerweb" value="" />
+		<put-attribute name="headeradmin" value="" />
+		
+		<put-attribute name="menu" value="" />
+		<put-attribute name="adminMenu" value="" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/jsp/header/footer.jsp" />
+	</definition>
+	
+		<definition name="baseLayoutPopUp" template="/jsp/header/BaseLayout.jsp">
+
+		<put-attribute name="headerhome" value="" />
+		<put-attribute name="headerweb" value="" />
+		<put-attribute name="headeradmin" value="" />	
+		
+		<put-attribute name="menu" value="" />
+		<put-attribute name="adminMenu" value="" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="" />
+	</definition>
+	
+	
+	<definition name="baseLayoutLeftMenu" template="/jsp/header/BaseLayout1.jsp">
+
+		<put-attribute name="headerhome" value="" />
+		<put-attribute name="headerweb" value="" />
+		<put-attribute name="headeradmin" value="" />
+		
+		<put-attribute name="menu" value="" />
+		
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"   value="/jsp/header/footer.jsp"  />
+	</definition>
+	
+	
+	<definition name="headerhome" template="/jsp/header/headerhome.jsp" />
+	<definition name="headerweb" template="/jsp/header/headerweb.jsp" />
+	<definition name="headeradmin" template="/jsp/header/headeradmin.jsp" />
+	
+	<definition name="menu" template="/jsp/header/leftMenu.jsp" />
+	<definition name="menu" template="/jsp/header/irParasLeft.jsp" />
+	<definition name="menu" template="/jsp/header/ayacutLeft.jsp" />
+	<definition name="adminMenu" template="/jsp/header/menu.jsp" />
+	
+	<!-- PMS web starts here -->
+	
+	<definition name="home" extends="baseLayout">
+		<put-attribute name="title"
+			value="Iand CAD Court Cases Monitoring System" />
+		<put-attribute name="headerhome" value="/jsp/header/headerhome.jsp"  />		
+		</definition>
+		
+		
+			<definition name="errorPage" extends="baseLayout">
+		<put-attribute name="title"
+			value="Iand CAD Court Cases Monitoring System" />
+		<put-attribute name="body" value="/jsp/leagaluser/error.jsp"  />		
+		</definition>
+		
+		
+		<definition name="login" extends="baseLayout">
+		<put-attribute name="title"
+			value="Iand CAD Court Cases Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"  />	
+		<put-attribute name="body" value="/jsp/leagaluser/login.jsp"   />	
+		</definition>
+		
+		<definition name="changepassword" extends="baseLayout">
+		<put-attribute name="title" value="Iand CAD Court Cases Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp" />
+		<put-attribute name="body" value="/jsp/leagaluser/changePassword.jsp" />
+	</definition>
+	
+	
+	
+	
+		
+		<definition name="caseinput" extends="baseLayout">
+		<put-attribute name="title"
+			value="Iand CAD Court Cases Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="body" value="/jsp/leagaluser/caseinput.jsp"   />
+	</definition>
+	
+	<definition name="caseedit" extends="baseLayout">
+		<put-attribute name="title"
+			value="Iand CAD Court Cases Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="body" value="/jsp/leagaluser/caseEdit.jsp"   />
+	</definition>
+	
+	<definition name="addPetitioner" extends="baseLayout">
+		<put-attribute name="title"
+			value="Iand CAD Court Cases Monitoring System" />
+		<!-- <put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    /> -->
+		<put-attribute name="body" value="/jsp/leagaluser/addPetitioner.jsp"   />
+	</definition>
+	
+	<definition name="addPetAdv" extends="baseLayout">
+		<put-attribute name="title"
+			value="Iand CAD Court Cases Monitoring System" />
+		<!-- <put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    /> -->
+		<put-attribute name="body" value="/jsp/leagaluser/addPetAdv.jsp"   />
+	</definition>
+	
+	<definition name="addRespondent" extends="baseLayout">
+		<put-attribute name="title"
+			value="Iand CAD Court Cases Monitoring System" />
+		<!-- <put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    /> -->
+		<put-attribute name="body" value="/jsp/leagaluser/addRespondent.jsp"   />
+	</definition>
+	
+	
+	<definition name="addRespondentAdv" extends="baseLayout">
+		<put-attribute name="title"
+			value="Iand CAD Court Cases Monitoring System" />
+		<!-- <put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    /> -->
+		<put-attribute name="body" value="/jsp/leagaluser/addRespondentAdv.jsp"   />
+	</definition>
+	
+	<definition name="addPackage" extends="baseLayout">
+		<put-attribute name="title"
+			value="Iand CAD Court Cases Monitoring System" />
+		<!-- <put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    /> -->
+		<put-attribute name="body" value="/jsp/leagaluser/addPackage.jsp"   />
+	</definition>
+	
+	<definition name="addContact" extends="baseLayout">
+		<put-attribute name="title"
+			value="Iand CAD Court Cases Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="body" value="/jsp/leagaluser/addContact.jsp"   />
+	</definition>
+	
+	
+	<definition name="addCaseType" extends="baseLayout">
+		<put-attribute name="title"
+			value="Iand CAD Court Cases Monitoring System" />
+		<!-- <put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    /> -->
+		<put-attribute name="body" value="/jsp/leagaluser/addCaseType.jsp"   />
+	</definition>
+	
+	<definition name="caseEditDelete" extends="baseLayout">
+		<put-attribute name="title"
+			value="Iand CAD Court Cases Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="body" value="/jsp/leagaluser/caseEditDelete.jsp"   />
+	</definition>
+	
+	
+	
+	
+	<definition name="addCaseSubGen" extends="baseLayout">
+		<put-attribute name="title"
+			value="Iand CAD Court Cases Monitoring System" />
+		<!-- <put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    /> -->
+		<put-attribute name="body" value="/jsp/leagaluser/addCaseSubGen.jsp"   />
+	</definition>
+	
+	<definition name="addCaseGen" extends="baseLayout">
+		<put-attribute name="title"
+			value="Iand CAD Court Cases Monitoring System" />
+		<!-- <put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    /> -->
+		<put-attribute name="body" value="/jsp/leagaluser/addCaseGen.jsp"   />
+	</definition>
+	
+		
+	
+
+	<definition name="contactus" extends="baseLayout">
+		<put-attribute name="title"
+			value="Iand CAD Court Cases Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="body" value="/jsp/contactus/contactus.jsp"   />
+		
+	</definition>
+
+	
+
+	
+	
+	<definition name="contactQuery" extends="baseLayout">
+		<put-attribute name="title"
+			value="Iand CAD Court Cases Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="body" value="/jsp/contactus/contactQuery.jsp"   />
+		
+	</definition>
+	
+	
+	<definition name="contactStatus" extends="baseLayout">
+		<put-attribute name="title"
+			value="Iand CAD Court Cases Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="body" value="/jsp/contactus/contactStatus.jsp"   />
+		
+	</definition>
+	
+	
+	
+	
+	
+	<definition name="contactUpdate" extends="baseLayout">
+		<put-attribute name="title"
+			value="Iand CAD Court Cases Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="body" value="/jsp/contactus/contactUpdate.jsp"   />
+		
+	</definition>
+	
+	
+	<definition name="updateDataBase" extends="baseLayout">
+		<put-attribute name="title" value="edit" />
+		<put-attribute name="adminMenu" value="/jsp/header/headeradmin.jsp" />
+		<put-attribute name="body" value="/jsp/leagaluser/updateDataBase.jsp" />
+	</definition>
+	
+	<definition name="updatetaskDB" extends="baseLayout">
+		<put-attribute name="title" value="edit" />
+		<put-attribute name="adminMenu" value="/jsp/header/headeradmin.jsp" />
+		<put-attribute name="body" value="/jsp/taskuser/updatetaskdb.jsp" />
+	</definition>
+	
+	<definition name="updatecomponentDB" extends="baseLayout">
+		<put-attribute name="title" value="edit" />
+		<put-attribute name="adminMenu" value="/jsp/header/headeradmin.jsp" />
+		<put-attribute name="body" value="/jsp/componentuser/updatecomponentDB.jsp" />
+	</definition>
+	
+	
+	<definition name="updateirparasDB" extends="baseLayout">
+		<put-attribute name="title" value="edit" />
+		<put-attribute name="adminMenu" value="/jsp/header/headeradmin.jsp" />
+		<put-attribute name="body" value="/jsp/irparas/updateirparasDB.jsp" />
+	</definition>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!--  court cases Admin Ends here  -->
+	
+	<!-- court cases Reports starts here -->
+	
+	<definition name="casesview" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Court Cases Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headerweb.jsp"    />
+		<put-attribute name="body" value="/jsp/leagalreport/caseslaandcontractual.jsp"   />
+		
+	</definition>
+	
+	
+	<definition name="caseDetails" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Court Cases Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headerweb.jsp"    />
+		<put-attribute name="body" value="/jsp/leagalreport/caseDetails.jsp"   />
+		
+	</definition>
+	
+	<definition name="abstractCounterFileData" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Court Cases Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headerweb.jsp"    />
+		<put-attribute name="body" value="/jsp/leagalreport/abstractCounterFileData.jsp"   />
+		
+	</definition>
+	
+	<definition name="caseTypeDetails" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Court Cases Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headerweb.jsp"    />
+		<put-attribute name="body" value="/jsp/leagalreport/caseTypeDetails.jsp"   />
+		
+	</definition>
+	
+	<definition name="abstractEPdata" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Court Cases Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headerweb.jsp"    />
+		<put-attribute name="body" value="/jsp/leagalreport/abstractEPdata.jsp"   />
+		
+	</definition>
+	
+	<definition name="abstractPetAdvdata" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Court Cases Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headerweb.jsp"    />
+		<put-attribute name="body" value="/jsp/leagalreport/abstractPetAdv.jsp"   />
+		
+	</definition>
+	
+	
+	<definition name="petAdvDetails" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Court Cases Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headerweb.jsp"    />
+		<put-attribute name="body" value="/jsp/leagalreport/caseDetailsPetAdv.jsp"   />
+		
+	</definition>
+	
+	<definition name="petStatus" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Court Cases Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headerweb.jsp"    />
+		<put-attribute name="body" value="/jsp/leagalreport/abstractPet.jsp"   />
+		
+	</definition>
+	
+	<definition name="petDetails" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Court Cases Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headerweb.jsp"    />
+		<put-attribute name="body" value="/jsp/leagalreport/caseDetailsPet.jsp"   />
+		
+	</definition>
+	
+	<!-- start of ayacut -->
+	<definition name="ayacutinput" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Projects Ayacut Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headerweb.jsp"    />
+		<put-attribute name="body" value="/jsp/ayacutuser/ayacutinput.jsp"   />
+		
+	</definition>
+	
+	<definition name="addayacut" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Projects Ayacut Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headerweb.jsp"    />
+		<put-attribute name="body" value="/jsp/ayacutuser/addayacut.jsp"   />
+		
+	</definition>
+	
+	<definition name="addcomponent" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Projects Ayacut Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headerweb.jsp"    />
+		<put-attribute name="body" value="/jsp/ayacutuser/addcomponent.jsp"   />
+		
+	</definition>
+	
+	<definition name="taskinput" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Task Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="body" value="/jsp/taskuser/taskinput.jsp"   />
+		
+	</definition>
+	
+	<definition name="taskreport1" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Task Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headerweb.jsp"    />
+		<put-attribute name="body" value="/jsp/taskreports/taskreport.jsp"   />
+		
+	</definition>
+	
+	<definition name="taskreport2" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Task Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headerweb.jsp"    />
+		<put-attribute name="body" value="/jsp/taskreports/taskreport2.jsp"   />
+		
+	</definition>
+	
+	<definition name="addEmp" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Task Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headerweb.jsp"    />
+		<put-attribute name="body" value="/jsp/taskuser/addEmployee.jsp"   />
+		
+	</definition>
+	
+	<definition name="deleteTask" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Task Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="body" value="/jsp/taskuser/deleteTask.jsp"   />
+		
+	</definition>
+	
+	<definition name="editTask" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Task Monitoring System" />
+		<!-- <put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    /> -->
+		<put-attribute name="body" value="/jsp/taskuser/editTask.jsp"   />
+		
+	</definition>
+	
+	<definition name="editEmployee" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Task Monitoring System" />
+		 <put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    /> 
+		<put-attribute name="body" value="/jsp/taskuser/editEmployee.jsp"   />
+		
+	</definition>
+	<definition name="editEmpData" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Task Monitoring System" />
+		<!-- <put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    /> -->
+		<put-attribute name="body" value="/jsp/taskuser/editEmpData.jsp"   />
+		
+	</definition>
+	
+	<definition name="projectCompDiagram" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headerweb.jsp"    />
+		<put-attribute name="body" value="/jsp/componentreport/projectcompdiagram.jsp"   />
+		
+	</definition>
+	
+	<definition name="componentinput" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="body" value="/jsp/componentuser/compinput.jsp"   />
+		
+	</definition>
+	
+	<definition name="addcomponent" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="body" value="/jsp/componentuser/addcomp.jsp"   />
+		
+	</definition>
+	
+	
+	
+	<definition name="componentprojectreport" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headerweb.jsp"    />
+		<put-attribute name="body" value="/jsp/componentreport/compprojreport.jsp"   />
+		
+	</definition>
+	
+	<definition name="compmonthlypower" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="body" value="/jsp/componentuser/compmonthlypower.jsp"   />
+		
+	</definition>
+	
+	
+	<definition name="loadoflifts" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headerweb.jsp"    />
+		<put-attribute name="body" value="/jsp/componentreport/allliftloads.jsp"   />
+		
+	</definition>
+	
+	<definition name="summeryoflifts" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headerweb.jsp"    />
+		<put-attribute name="body" value="/jsp/componentreport/summeryliftloads.jsp"   />
+		
+	</definition>
+	
+	<definition name="comppowerinfo" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headerweb.jsp"    />
+		<put-attribute name="body" value="/jsp/componentreport/comppowerinfo.jsp"   />
+		
+	</definition>
+	<definition name="compmonthlyayacut" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="body" value="/jsp/componentuser/compmonthlyayacut.jsp"   />
+		
+	</definition>
+	
+	<definition name="deleteComponent" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="body" value="/jsp/componentuser/deletecomp.jsp"   />
+		
+	</definition>
+	
+	<definition name="editComponent" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+	<!-- 	<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    /> -->
+		<put-attribute name="body" value="/jsp/componentuser/editcomp.jsp"   />
+		
+	</definition>
+	
+	<definition name="deleteCompinput" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="body" value="/jsp/componentuser/deletecompinput.jsp"   />
+		
+	</definition>
+	
+	<definition name="editCompinput" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<!-- <put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    /> -->
+		<put-attribute name="body" value="/jsp/componentuser/editcompinput.jsp"   />
+		
+	</definition>
+	
+	
+	<definition name="editCompMotorInfo" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+	<!-- 	<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    /> -->
+		<put-attribute name="body" value="/jsp/componentuser/editCompMotorInfo.jsp"   />
+		
+	</definition>
+	
+	<definition name="deletecompmonayacut" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="body" value="/jsp/componentuser/deletecompmonayacut.jsp"   />
+		
+	</definition>
+	
+	<definition name="editcompmonayacut" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<!-- <put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    /> -->
+		<put-attribute name="body" value="/jsp/componentuser/editcompmonayacut.jsp"   />
+		
+	</definition>
+	
+	<definition name="deletecompmonpower" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="body" value="/jsp/componentuser/deletecompmonpower.jsp"   />
+		
+	</definition>
+	
+	
+	<definition name="deleteCompdailyInput" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="body" value="/jsp/componentuser/deleteDailyInput.jsp"   />
+		
+	</definition>
+	
+	<definition name="DischargeInput" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="body" value="/jsp/componentuser/pumpDischargeInput.jsp"   />
+		
+	</definition>
+	
+	
+	<definition name="deleteDischargeInput" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="body" value="/jsp/componentuser/deleteDischargeInput.jsp"   />
+		
+	</definition>
+	
+	<definition name="editDischargeInput" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<!-- <put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    /> -->
+		<put-attribute name="body" value="/jsp/componentuser/editDischargeInput.jsp"   />
+		
+	</definition>
+	
+	
+	
+	
+	<definition name="editDailyInput" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<!-- <put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    /> -->
+		<put-attribute name="body" value="/jsp/componentuser/editDailyInput.jsp"   />
+		
+	</definition>
+	
+	
+	<definition name="editcompmonpower" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<!-- <put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    /> -->
+		<put-attribute name="body" value="/jsp/componentuser/editcompmonpower.jsp"   />
+		
+	</definition>
+	
+	<definition name="compMap" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headerweb.jsp"    />
+		<put-attribute name="body" value="/jsp/componentuser/componentMap.jsp"   />
+		
+	</definition>
+	
+		<definition name="compayacutinput" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/ayacutLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/componentuser/compayacutinput.jsp"   />
+		
+	</definition>
+	
+	<definition name="cad-kml-input" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/ayacutLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/componentuser/cad-kml-input.jsp"   />
+		
+	</definition>
+	
+	<definition name="compAyacutReport" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/ayacutLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/componentreport/compAyacutReport.jsp"   />
+		
+	</definition>
+	
+	<definition name="ce-ayacut" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/ayacutLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/componentreport/ce-ayacut.jsp"   />
+		
+	</definition>
+	<definition name="ce-district-ayacut" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/ayacutLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/componentreport/ce-district-ayacut.jsp"   />
+		
+	</definition>
+	
+	<definition name="proj-pack-man" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/ayacutLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/componentreport/proj-pack-man.jsp"   />
+		
+	</definition>
+	
+	<definition name="proj-man" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/ayacutLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/componentreport/proj-man.jsp"   />
+		
+	</definition>
+	
+	<definition name="proj-man-village" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/ayacutLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/componentreport/proj-man-village.jsp"   />
+		
+	</definition>
+	
+	<definition name="dist-man-proj" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/ayacutLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/componentreport/dist-man-proj.jsp"   />
+		
+	</definition>
+	
+	<definition name="dist-man-proj-total" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/ayacutLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/componentreport/dist-man-proj-total.jsp"   />
+		
+	</definition>
+	
+	<definition name="district-ayacut" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/ayacutLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/componentreport/district-ayacut.jsp"   />
+		
+	</definition>
+	
+	<definition name="constProjectAyacutReport" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/ayacutLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/componentreport/constProjectAyacutReport.jsp"   />
+		
+	</definition>
+	
+	<definition name="consttotalayacutsp" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/ayacutLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/componentreport/consttotalayacutsp.jsp"   />
+		
+	</definition>
+	
+		<definition name="projtotalayacut" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/ayacutLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/componentreport/projtotalayacut.jsp"   />
+		
+	</definition>
+	
+	
+	<definition name="projTotalDistConstAyacut" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/ayacutLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/componentreport/projTotalDistConstAyacut.jsp"   />
+		
+	</definition>
+	
+	
+	<definition name="distTotalConstAyacut" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/ayacutLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/componentreport/distTotalConstAyacut.jsp"   />
+		
+	</definition>
+	
+	
+		<definition name="mandalTotalAyacut" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/ayacutLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/componentreport/mandalTotalAyacut.jsp"   />
+		
+	</definition>
+	
+	
+	
+	<definition name="jurisdictionAyacutReport" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/ayacutLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/componentreport/jurisdictionAyacutReport.jsp"   />
+		
+	</definition>
+	
+	<definition name="division-mandal-ayacut" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/ayacutLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/componentreport/division-mandal-ayacut.jsp"   />
+		
+	</definition>
+	
+	
+	
+		<definition name="consttotalprojayacut" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/ayacutLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/componentreport/consttotalprojayacut.jsp"   />
+		
+	</definition>
+	
+	<definition name="projectTotalReport" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/ayacutLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/componentreport/projectTotalReport.jsp"   />
+		
+	</definition>
+	
+	
+		<definition name="villageAyacutReport" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/ayacutLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/componentreport/villageAyacutReport.jsp"   />
+		
+	</definition>
+	
+	<definition name="villageByConstDistMan" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/ayacutLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/componentreport/villageByConstDistMan.jsp"   />
+		
+	</definition>
+	
+	<definition name="villageByConst" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/ayacutLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/componentreport/constVillageAyacut.jsp"   />
+		
+	</definition>
+	
+	<definition name="mandalayacutbyunitproj" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headerweb" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/ayacutLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/componentreport/unitProjectAyacut.jsp"   />
+		
+	</definition>
+	
+	
+	<definition name="liftcompinput" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="body" value="/jsp/componentuser/liftcompinput.jsp"   />
+		
+	</definition>
+	
+	<definition name="compLiftDailyInput" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="body" value="/jsp/componentuser/compLiftDailyInput.jsp"   />
+		
+	</definition>
+	
+	
+	<definition name="addeditdeletecomp" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="body" value="/jsp/componentuser/addeditdeletecomp.jsp"   />
+		
+	</definition>
+	
+	<definition name="componentPowerBill" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="body" value="/jsp/componentuser/componentPowerBill.jsp"   />
+		
+	</definition>
+	
+	<definition name="deleteCompPowerBill" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="body" value="/jsp/componentuser/deleteCompPowerBill.jsp"   />
+		
+	</definition>
+	
+	<definition name="editCompPowerBill" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		
+		<put-attribute name="body" value="/jsp/componentuser/editCompPowerBill.jsp"   />
+		
+	</definition>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<definition name="deleteCompAyacut" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="menu" value="/jsp/header/ayacutLeft.jsp"    />
+		<put-attribute name="body" value="/jsp/componentuser/deleteCompAyacut.jsp"   />
+		
+	</definition>
+	
+	<definition name="editCompAyacut" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Component Monitoring System" />
+		
+		<put-attribute name="body" value="/jsp/componentuser/editCompAyacut2.jsp"   />
+		
+	</definition>
+	
+	
+	
+	<!-- irprasastart -->
+	
+	
+	<definition name="parasinput" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD IRParas Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="body" value="/jsp/irparas/irparasinput.jsp"   />
+		
+	</definition>
+	
+	
+	<definition name="add-para-data" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="TS Irrigation Management Information System" />
+			<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+			 <put-attribute name="menu" value="/jsp/header/irParasLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/irparas/add-para-data.jsp"   />
+		<!-- <put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="body" value="/jsp/irparas/addPara.jsp"   /> -->
+		
+	</definition>
+	
+	
+
+	
+	<definition name="addPara" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="TS Irrigation Management Information System" />
+			<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+			 <put-attribute name="menu" value="/jsp/header/irParasLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/irparas/addPara.jsp"   />
+		<!-- <put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="body" value="/jsp/irparas/addPara.jsp"   /> -->
+		
+	</definition>
+	
+	<definition name="addCAGParaGist" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD IRParas Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/irParasLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/irparas/addCAGParaGist.jsp"   />
+		
+	</definition>
+	
+	<definition name="addCAGSubPara" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD IRParas Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/irParasLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/irparas/addCAGSubPara.jsp"   />
+		
+	</definition>
+	
+	
+	<definition name="addcagPara" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD IRParas Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/irParasLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/irparas/addcagPara.jsp"   />
+		
+	</definition>
+	
+	<definition name="addcagreplydocs" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD IRParas Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/irParasLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/irparas/addcagreplydocs.jsp"   />
+		
+	</definition>
+	
+	
+	
+	
+	<definition name="editparas" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD IRParas Monitoring System" />
+		<!-- <put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    /> -->
+		<put-attribute name="body" value="/jsp/irparas/editirparas.jsp"   />
+		
+	</definition>
+	
+	<definition name="editcagparas" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD IRParas Monitoring System" />
+		<!-- <put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    /> -->
+		<put-attribute name="body" value="/jsp/irparas/editcagparas.jsp"   />
+		
+	</definition>
+	
+	<definition name="viewdeletereply" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD IRParas Monitoring System" />
+		<!-- <put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    /> -->
+		<put-attribute name="body" value="/jsp/irparas/viewdeletereply.jsp"   />
+		
+	</definition>
+	
+	<definition name="addnewreply" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD IRParas Monitoring System" />
+		<!-- <put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    /> -->
+		<put-attribute name="body" value="/jsp/irparas/addNewreply.jsp"   />
+		
+	</definition>
+	
+	<definition name="deleteirparas" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD IRParas Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/irParasLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/irparas/deleteirparas.jsp"   />
+		
+	</definition>
+	
+	<definition name="deletecagparas" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD IRParas Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/irParasLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/irparas/deletecagparas.jsp"   />
+		
+		
+		
+	</definition>
+	
+	<definition name="parastatus" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD IRParas Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/irParasLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/irparasreport/parastatus.jsp"   />
+		
+	</definition>
+	
+	
+	<definition name="paraabstarctOffice" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD IRParas Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/irParasLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/irparasreport/paraabstarctOffice.jsp"   />
+		
+	</definition>
+	
+	
+	
+	
+	<definition name="paraDetailTotal" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD IRParas Monitoring System" />
+			<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/irParasLeft.jsp"    /> 		
+		<put-attribute name="body" value="/jsp/irparasreport/paraDetailTotal.jsp"   />
+		
+	</definition>
+	
+	<definition name="paraDetailreplybyunit" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD IRParas Monitoring System" />
+		
+		<put-attribute name="body" value="/jsp/irparasreport/paraDetailreplybyunit.jsp"   />
+		
+	</definition>
+	
+	<definition name="parasDetailReplyAll" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD IRParas Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/irParasLeft.jsp"    /> 
+		
+		<put-attribute name="body" value="/jsp/irparasreport/parasDetailReplyAll.jsp"   />
+		
+	</definition>
+	
+	<!-- <definition name="pdfView" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD IRParas Monitoring System" />
+		
+		<put-attribute name="body" value="/jsp/irparasreport/pdfView.jsp"   />
+		
+	</definition>
+	 -->
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- irparasend -->
+	
+	
+	
+	<definition name="disclaimer" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD IRParas Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headerweb.jsp"    />
+		<put-attribute name="body" value="/jsp/header/disclaimer.jsp"   />
+		
+	</definition>
+	
+	<definition name="terms" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD IRParas Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headerweb.jsp"    />
+		<put-attribute name="body" value="/jsp/header/terms.jsp"   />
+		
+	</definition>
+	
+	<definition name="cagstatus" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD IRParas Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/irParasLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/irparasreport/cagstatus.jsp"   />
+		
+	</definition>
+	
+	<definition name="cagstatusyear" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD IRParas Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/irParasLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/irparasreport/cagstatusbyyear.jsp"   />
+		
+	</definition>
+	
+	<definition name="cagstatusbyunit" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD IRParas Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/irParasLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/irparasreport/cagtstatusbyunit.jsp"   />
+		
+	</definition>
+	
+	<definition name="cagParasAbstractOffice" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD IRParas Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/irParasLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/irparasreport/cagParasAbstractOffice.jsp"   />
+		
+	</definition>
+	
+	<definition name="cagparaDetailTotal" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD IRParas Monitoring System" />
+		
+		<put-attribute name="body" value="/jsp/irparasreport/cagparaDetailTotal.jsp"   />
+		
+	</definition>
+	
+	
+	<definition name="cagparadetail" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD IRParas Monitoring System" />
+		
+		<put-attribute name="body" value="/jsp/irparasreport/cagparadetail.jsp"   />
+		
+	</definition>
+	
+	<definition name="cagparasDetailReplyAll" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD IRParas Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/irParasLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/irparasreport/cagparasDetailReplyAll.jsp"   />
+		
+	</definition>
+	
+	<definition name="editcagparareply" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD IRParas Monitoring System" />
+		
+		<put-attribute name="body" value="/jsp/irparas/editcagparareply.jsp"   />
+		
+	</definition>
+	
+	
+	
+	<definition name="infixexpression" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD IRParas Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headerweb.jsp"    />
+		<put-attribute name="body" value="/jsp/irparasreport/infixexpression.jsp"   />
+		
+	</definition>
+	
+	
+	<definition name="addReservoir" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD Inventory Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="body" value="/jsp/inventory/reservoirsinput.jsp"   />
+		
+	</definition>
+	
+	
+	<definition name="resvoirabstract" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD IRParas Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headerweb.jsp"    />
+		<put-attribute name="body" value="/jsp/inventoryReports/resvoirabstract.jsp"   />
+		
+	</definition>
+	<definition name="reservoirUnitMapDetail" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD IRParas Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headerweb.jsp"    />
+		<put-attribute name="body" value="/jsp/inventoryReports/reservoirUnitMapDetail.jsp"   />
+		
+	</definition>
+	<definition name="reservoirinfo" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD IRParas Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headerweb.jsp"    />
+		<put-attribute name="body" value="/jsp/inventoryReports/reservoirinfo.jsp"   />
+		
+	</definition>
+	
+	<definition name="updateinvDB" extends="baseLayout">
+		<put-attribute name="title" value="edit" />
+		<put-attribute name="adminMenu" value="/jsp/header/headeradmin.jsp" />
+		<put-attribute name="menu" value="/jsp/header/leftMenu.jsp"    /> 
+		<put-attribute name="body" value="/jsp/inventory/updateinvDB.jsp" />
+	</definition>
+	
+	<definition name="omlift-input" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD IRParas Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="menu" value="/jsp/header/leftMenu.jsp"    /> 
+		<put-attribute name="body" value="/jsp/inventory/omlift_input.jsp"   />
+		
+	</definition>
+	
+	<definition name="omcanal-input" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD IRParas Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="body" value="/jsp/inventory/omcanal_input.jsp"   />
+		
+	</definition>
+	
+	<definition name="omreservoir-input" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD IRParas Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="body" value="/jsp/inventory/omreservoir_input.jsp"   />
+		
+	</definition>
+	
+	<definition name="res-juris" extends="baseLayout">
+		<put-attribute name="title"
+			value="IandCAD IRParas Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="body" value="/jsp/inventory/assign_res.jsp"   />
+		
+	</definition>
+	
+	<definition name="mitank-checks" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="menu" value="/jsp/header/leftMenu.jsp"    /> 
+		<put-attribute name="body" value="/jsp/invOandM/mitank_checks.jsp"   />
+		
+	</definition>
+	
+	
+	
+	
+	<definition name="omlift-log1" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/projectsLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/invOandM/omlift_log1.jsp"   />
+		
+	</definition>
+	
+	<definition name="omlift-maintain" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/projectsLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/invOandM/omlift_maintain.jsp"   />
+		
+	</definition>
+	
+	<definition name="res-schedule-duties" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		 <put-attribute name="menu" value="/jsp/header/projectsLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/invOandM/res_schedule_duties.jsp"   />
+		
+	</definition>
+	
+	<definition name="Tank-checks-abstract" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="menu" value="/jsp/header/leftMenu.jsp"    /> 
+		<put-attribute name="body" value="/jsp/invOandMReports/Tank-checks-abstract.jsp"   />
+		
+	</definition>
+	
+	<definition name="TankchecksDetail" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="menu" value="/jsp/header/leftMenu.jsp"    /> 
+		<put-attribute name="body" value="/jsp/invOandMReports/Tank-checks-Detail.jsp"   />
+		
+	</definition>
+	
+	<definition name="res-ann1" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+	 <put-attribute name="menu" value="/jsp/header/projectsLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/invOandM/reservoir-ann1.jsp"   />
+		
+	</definition>
+	
+	<definition name="res-ann2" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+	 <put-attribute name="menu" value="/jsp/header/projectsLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/invOandM/reservoir-ann2.jsp"   />
+		
+	</definition>
+	
+	
+	
+	<definition name="left-menu-home" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="TS Irrigation Management Information System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+	    <put-attribute name="menu" value="/jsp/header/leftMenu.jsp"    /> 
+		<put-attribute name="body" value="/jsp/header/leftMenuHome.jsp"   />
+		
+	</definition>
+	
+	
+	<definition name="form20-menu-home" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="TS Irrigation Management Information System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+	    <put-attribute name="menu" value="/jsp/header/form20Left.jsp"    /> 
+		<put-attribute name="body" value="/jsp/header/form20MenuHome.jsp"   />
+		
+	</definition>
+	
+	<definition name="irparas-menu-home" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="TS Irrigation Management Information System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+	    <put-attribute name="menu" value="/jsp/header/irParasLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/header/irparasLeftHome.jsp"   />
+		
+	</definition>
+	
+	<definition name="ayacut-menu-home" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="TS Irrigation Management Information System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+	    <put-attribute name="menu" value="/jsp/header/ayacutLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/header/ayacutLeftHome.jsp"   />
+		
+	</definition>
+	
+	
+	<definition name="sciwam-menu-home" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="TS Irrigation Management Information System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+	    <put-attribute name="menu" value="/jsp/header/sciwamLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/header/sciwamLeftHome.jsp"   />
+		
+	</definition>
+	
+	<definition name="projects-menu-home" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="TS Irrigation Management Information System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+	    <put-attribute name="menu" value="/jsp/header/projectsLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/header/projectsLeftHome.jsp"   />
+		
+	</definition>
+	
+	
+	
+	
+	<definition name="res-ann1-abstract" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+	    <put-attribute name="menu" value="/jsp/header/projectsLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/invOandMReports/res-ann1-abstract.jsp"   />
+		
+	</definition>
+	
+	<definition name="res-ann1-Detail" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+	    <put-attribute name="menu" value="/jsp/header/projectsLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/invOandMReports/res-ann1-Detail.jsp"   />
+		
+	</definition>
+	
+	<definition name="res-category-Detail" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+	    <put-attribute name="menu" value="/jsp/header/projectsLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/invOandMReports/res-category-Details.jsp"   />
+		
+	</definition>
+	
+	
+	
+	
+	<definition name="res-ann1-Total-res" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+	    <put-attribute name="menu" value="/jsp/header/projectsLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/invOandMReports/res-ann1-Total_res.jsp"   />
+		
+	</definition>
+	
+	<definition name="res-ann2-Abstract" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+	    <put-attribute name="menu" value="/jsp/header/projectsLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/invOandMReports/res-ann2-abstract.jsp"   />
+		
+	</definition>
+	
+	<definition name="Schedule-Duty-Report" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+	    <put-attribute name="menu" value="/jsp/header/projectsLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/invOandMReports/ScheduleDutyReport.jsp"   />
+		
+	</definition>
+	
+	<definition name="pump-station-maintenance" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+	    <put-attribute name="menu" value="/jsp/header/projectsLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/invOandMReports/pump-station-maintenance.jsp"   />
+		
+	</definition>
+	
+	<definition name="res-assn" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+	    <put-attribute name="menu" value="/jsp/header/projectsLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/invOandM/res-assn.jsp"   />
+		
+	</definition>
+	
+	
+	
+	
+	<definition name="canal-maintenance" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+	    <put-attribute name="menu" value="/jsp/header/projectsLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/invOandM/canal-maintenance.jsp"   />
+		
+	</definition>
+	
+	
+	<definition name="updateinvomDB" extends="baseLayoutLeftMenu">
+	<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />
+			<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+	    <put-attribute name="menu" value="/jsp/header/leftMenu.jsp"    /> 
+		<put-attribute name="body" value="/jsp/invOandM/updateinvomDB.jsp" />
+	</definition>
+	
+	<definition name="updatemisview" extends="baseLayoutLeftMenu">
+	<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />
+			<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+	    <put-attribute name="menu" value="/jsp/header/leftMenu.jsp"    /> 
+		<put-attribute name="body" value="/jsp/invOandM/updatemisview.jsp" />
+	</definition>
+	
+	<definition name="updatetanksviewDB" extends="baseLayoutLeftMenu">
+	<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />
+			<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+	    <put-attribute name="menu" value="/jsp/header/leftMenu.jsp"    /> 
+		<put-attribute name="body" value="/jsp/invOandM/updatetanksviewDB.jsp" />
+	</definition>
+	
+	<definition name="updatestagetims" extends="baseLayoutLeftMenu">
+	<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />
+			<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+	    <put-attribute name="menu" value="/jsp/header/leftMenu.jsp"    /> 
+		<put-attribute name="body" value="/jsp/invOandM/updatestagetims.jsp" />
+	</definition>
+	
+	
+	
+	<definition name="updatestagehrms" extends="baseLayoutLeftMenu">
+	<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />
+			<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+	    <put-attribute name="menu" value="/jsp/header/leftMenu.jsp"    /> 
+		<put-attribute name="body" value="/jsp/invOandM/updatestagehrms.jsp" />
+	</definition>
+	
+
+<definition name="mapbox-view" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+	    <put-attribute name="menu" value="/jsp/header/leftMenu.jsp"    /> 
+		<put-attribute name="body" value="/jsp/invOandM/mapboxview.jsp"   />
+		
+	</definition>	
+	
+	
+	<definition name="repair-history-data" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />
+		
+		<put-attribute name="body" value="/jsp/invOandMReports/repair-history.jsp"   />
+		
+	</definition>
+	
+	
+	<definition name="tank-feed" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="menu" value="/jsp/header/leftMenu.jsp"    /> 
+		<put-attribute name="body" value="/jsp/invOandM/tank-feed.jsp"   />
+		
+	</definition>
+	
+	<definition name="tank-fed-get" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="menu" value="/jsp/header/leftMenu.jsp"    /> 
+		<put-attribute name="body" value="/jsp/invOandMReports/Tank-fed-view.jsp"   />
+		
+	</definition>
+	
+	<definition name="add-shivam-data" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="menu" value="/jsp/header/sciwamLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/componentuser/addShivamdata.jsp"   />
+		
+	</definition>
+	
+	<definition name="add-shivam-abstract" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="menu" value="/jsp/header/sciwamLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/componentuser/addSciwamabstract.jsp"   />
+		
+	</definition>
+	
+	<definition name="proj-season-act-plan" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="menu" value="/jsp/header/sciwamLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/componentreport/proj-season-act-plan.jsp"   />
+		
+	</definition>
+	
+	
+	<definition name="form20-input" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="menu" value="/jsp/header/form20Left.jsp"    /> 
+		<put-attribute name="body" value="/jsp/invOandM/form20-input.jsp"   />
+		
+	</definition>
+	
+	<definition name="form20-abstract" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="menu" value="/jsp/header/form20Left.jsp"    /> 
+		<put-attribute name="body" value="/jsp/invOandMReports/form20-abstract.jsp"   />
+		
+	</definition>
+	
+	
+	<definition name="form20-viewphoto" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />		
+		<put-attribute name="body" value="/jsp/invOandMReports/form20-viewphotos.jsp"   />
+		
+	</definition>
+	
+	<definition name="damsafety-viewphoto" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />		
+		<put-attribute name="body" value="/jsp/invOandMReports/damsafety-viewphotos.jsp"   />
+		
+	</definition>
+	
+	
+	<definition name="damsafety-getinfo" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />		
+		<put-attribute name="body" value="/jsp/invOandMReports/damsafety-getinfo.jsp"   />
+		
+	</definition>
+	
+	<definition name="damsafety-remarks" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />		
+		<put-attribute name="body" value="/jsp/invOandMReports/res_ann1_remarks.jsp"   />
+		
+	</definition>
+	
+	
+	
+	
+	<definition name="tank-form20-district" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="menu" value="/jsp/header/leftMenu.jsp"    /> 
+		<put-attribute name="body" value="/jsp/invOandMReports/tank-form20-district.jsp"   />
+		
+	</definition>
+	
+
+	
+	<definition name="viewIrrigationInv" extends="baseLayout">
+		<put-attribute name="title" value="edit" />
+		<put-attribute name="adminMenu" value="/jsp/header/headeradmin.jsp" />
+		<put-attribute name="body" value="/jsp/invOandM/viewIrrigationInv.jsp" />
+	</definition>
+	
+	<definition name="updateStagePmsDB" extends="baseLayout">
+		<put-attribute name="title" value="edit" />
+		<put-attribute name="adminMenu" value="/jsp/header/headeradmin.jsp" />
+		<put-attribute name="body" value="/jsp/invOandM/updateStagePmsDB.jsp" />
+	</definition>
+	
+	
+	
+		<definition name="medical-menu-Home" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="TS Irrigation Management Information System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+	    <put-attribute name="menu" value="/jsp/header/medicalLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/header/medicalmenuHome.jsp"   />
+		
+	</definition>
+	
+	
+	<definition name="medical-bill-input" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="menu" value="/jsp/header/medicalLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/medicalbills/medical-bill-input.jsp"   />
+		
+	</definition>
+	
+	<definition name="medical-forward-form" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />
+			<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="menu" value="/jsp/header/medicalLeft.jsp"    /> 	
+		<put-attribute name="body" value="/jsp/medicalbills/medicalforwardform1.jsp"   />
+		
+	</definition>
+	
+	<definition name="medical-auth-check-form" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />
+			<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="menu" value="/jsp/header/medicalLeft.jsp"    /> 	
+		<put-attribute name="body" value="/jsp/medicalbills/medicalrulesform1.jsp"   />
+		
+	</definition>
+	
+	
+	
+	<definition name="budget-menu-Home" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="TS Irrigation Management Information System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+	    <put-attribute name="menu" value="/jsp/header/budgetLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/header/budgetmenuHome.jsp"   />
+		
+	</definition>
+	
+	
+	<definition name="budget-query-input" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="menu" value="/jsp/header/budgetLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/budget/budget-query-input.jsp"   />
+		
+	</definition>
+	
+	
+	<definition name="budget-bill-input" extends="baseLayoutLeftMenu">
+		<put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="menu" value="/jsp/header/budgetLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/budget/budget-bill-input.jsp"   />
+		
+	</definition>
+	
+	
+	<definition name="dynamicViewForm" extends="baseLayoutLeftMenu">
+        <put-attribute name="title"
+			value="IandCAD O and M Monitoring System" />
+		<put-attribute name="headeradmin" value="/jsp/header/headeradmin.jsp"    />
+		<put-attribute name="menu" value="/jsp/header/budgetLeft.jsp"    /> 
+		<put-attribute name="body" value="/jsp/header/dynamicformtiles.jsp"    /> 
+		
+    </definition>
+
+
+</tiles-definitions>
+
